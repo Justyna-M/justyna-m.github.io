@@ -1,0 +1,28 @@
+h1 {
+  color: MediumTurquoise;
+   font-size: 60px;
+  text-align: center;
+}
+
+h2 {
+  color: LightCoral;
+   font-size: 40px;
+  text-align: center;
+}
+
+h3 {
+  color: Thistle;
+   font-size: 20px;
+  text-align: center;
+}
+
+html {
+  background-color: PapayaWhip;
+}
+
+.czesc2{
+background-color: LightSteelBlue;
+ width: 500px;
+text-align: center;
+margin: 0 auto;
+}

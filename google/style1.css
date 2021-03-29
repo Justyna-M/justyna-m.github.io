@@ -1,0 +1,224 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+}
+body {
+  display: block;
+  min-height: 100vh;
+}
+body .results{
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  max-height: none;
+}
+ .nawi{
+  display: none;
+}
+.section-1{
+  display: none;
+}
+.stop{
+  display: none;
+}
+.results .sekcja1 .logo{  
+  width: 90px;
+  cursor: pointer;
+  display: inline;
+  padding-top: 17px;  
+  margin-left: 22px;
+  margin-top: 10px;
+  vertical-align: top;
+}
+.results .sekcja1 .wpisywanie{
+  margin-top: 20px;
+  width: 700px;
+  display: inline-block;
+  vertical-align: bottom;
+  color: #5f6368;
+}
+.results .sekcja1 .wpisywanie .s-input{
+  display: block; 
+  border: 1px solid #ddd;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  padding: 13px;
+  padding-left: 45px;
+  border-radius: 25px;
+  width: 650px;
+  transition: box-shadow 100ms;
+  outline: none;
+  margin-left: 40px;
+  align-self: start; 
+}
+.results .sekcja1 .wpisywanie  .s-input:hover{
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px rgba(0,0,0, 0.05),
+              0 0 2px rgba(0,0,0, 0.05),
+              0 0 3px rgba(0,0,0, 0.05), 
+              0 0 4px rgba(0,0,0, 0.05), 
+              0 0 5px rgba(0,0,0, 0.05),
+              0 0 4px rgba(0,0,0, 0.05), 
+              0 0 5px rgba(0,0,0, 0.05)    
+}
+.results .sekcja1 .wpisywanie .linia{
+  border-left: 1px solid #b9b9b9;
+  position: relative;
+  height: 35px;
+  left: 285px;
+  top: -22px;
+}
+.results .sekcja1 .wpisywanie .tia-icon{
+  position: relative;
+  cursor: pointer;
+  width: 28px;
+  left: 555px;
+  top: -35px;
+}
+.results .sekcja1 .wpisywanie .search-icon{
+  width: 25px;
+  top: -38px;
+  left: 650px;
+  cursor: pointer; 
+  position: relative;
+}
+.results .sekcja1 .wpisywanie .vs-icon{
+  width: 15px;
+  top: -38px;
+  left: 565px;
+  cursor: pointer; 
+  position: relative;
+}
+.results .sekcja1 .wpisywanie .x-icon{
+  width: 20px;
+  top: -38px;
+  left: 460px;
+  cursor: pointer; 
+  position: relative;
+}
+
+.results .sekcja1 .panel {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  flex-direction: row;
+  left: 1070px;
+  top: -70px;
+}
+.results .sekcja1 .panel img{
+  width: 40px;
+  padding: 12px;
+  margin: auto 7px;
+  cursor: pointer;
+  opacity: .6;
+  float: right;  
+}
+.results .sekcja1 .panel img:hover{
+  opacity: .8;
+}
+.results .sekcja1 .panel button{
+  border: 1px solid #357df1;
+  outline: none;
+  background: #357df1;
+  padding: 10px 25px;
+  border-radius: 3px;
+  margin-left: 7px;
+  cursor: pointer;
+  color: white;
+  
+}
+.results .sekcja1 .panel button:hover{
+  opacity:0.90;
+}
+.results .sekcja1 .pasek{
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+  top: -40px;
+  position: relative;
+}
+.results .sekcja1 .pasek .a1{
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;  
+}
+.results .sekcja1 .pasek .link1{
+  color:rgb(8, 172, 248);
+}
+.results .sekcja1 .pasek .w{
+  height: 30px;
+}
+.results .sekcja1 .pasek .kreska{
+  border-bottom: 1px solid #ebe9e9;
+  position: absolute;
+  top: 25px;
+  left: -200px;
+  width: 298%;  
+}
+.results .sekcja1 .pasek .kreska2{
+  border-bottom: 3px solid rgb(8, 172, 248);
+  position: absolute;
+  top: 25px;
+  left: 11px;
+  width: 12%;  
+}
+.results .wyniki{
+  margin-left: 180px;
+  margin-top: -30px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+.results .wyniki .liczba{
+  color: grey;
+}
+.results .wyniki .wynik{
+  margin-top: 22px;
+}
+.results .wyniki .wynik .link2{
+  color: grey;
+}
+.results .wyniki .wynik .n1{
+  color: rgb(7, 7, 214);
+  font-size:170%;
+  padding-bottom: 4px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.results .wyniki .wynik .n2{
+  color: black;
+  font-size:117%;
+  padding-bottom: 7px;
+  padding-top: 3px;
+  line-height: 160%;
+}
+.results .wyniki .wynik .n3{
+  color: grey;
+  font-size:100%;
+  padding-bottom: 7px;
+  padding-top: 3px;
+}
+.results .wyniki .wynik .n4{
+  color: rgb(77, 75, 75);
+  font-size:120%;
+  padding-bottom: 7px;
+  padding-top: 3px;
+  line-height: 170%;
+  border-top: 1px solid #ebe9e9;
+  cursor:pointer;
+}
+.results .wyniki .wynik .tr{
+  width: 10px;
+  opacity: 0.6;
+}
+.results .wyniki .wynik .tr2{
+  cursor:pointer;
+}
+
+
+

@@ -173,7 +173,7 @@ body .results{
   display: flex;
   flex-direction: column;
   font-size: small;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .results .wyniki .liczba{
   color: grey;
@@ -196,7 +196,7 @@ body .results{
   font-size:117%;
   padding-bottom: 7px;
   padding-top: 3px;
-  line-height: 160%;
+  line-height: 25px;
 }
 .results .wyniki .wynik .n3{
   color: grey;
@@ -209,7 +209,7 @@ body .results{
   font-size:120%;
   padding-bottom: 7px;
   padding-top: 3px;
-  line-height: 170%;
+  line-height: 30px;
   border-top: 1px solid #ebe9e9;
   cursor:pointer;
 }
@@ -226,7 +226,7 @@ body .results{
   font-size:170%;
   padding-bottom: 7px;
   padding-top: 3px;
-  line-height: 170%;
+  line-height: 30px;
  
 }
 .results .wyniki .n6{
@@ -235,7 +235,7 @@ body .results{
   font-size:130%;
   padding-bottom: 7px;
   padding-top: 3px;
-  line-height: 190%;  
+  line-height: 30px;  
   cursor:pointer;
 }
 

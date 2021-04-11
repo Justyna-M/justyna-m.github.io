@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style1.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style1.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
     <title>Szukaj w Google</title>
 </head>
-
+<!--Nie działa, nie mogę znaleźć błędu.-->
 <body>
-    
+    <div id="app" :class="{results : googleSearch.length > 0}">
         <nav class="nawi">
             <a href="#">Gmail</a>
             <a href="#">Grafika</a>
@@ -24,7 +26,7 @@
                 <br><br>
                 <div class="s-box">
                     <img src="img/search.svg" class="search-icon">
-                    <input type="text" class="s-input">
+                    <input v-model="googleSearch" type="text" class="s-input">
                     <img src="img/tia.jpg" class="tia-icon">
                     <input type="submit" class="s-btn" value="Szukaj w Google">
                     <input type="submit" class="s-btn" value="Szczęśliwy traf">
@@ -52,60 +54,60 @@
             </div>
         </footer>
 
-        <div class="results">
-        <div class="sekcja1">
-            <img src="img/logo.png" class="logo">
-            <div class="wpisywanie">
-                <input type="text" class="s-input">
-                <span class="linia"></span>
-                <img src="img/search.PNG" class="search-icon2">
-                <img src="img/klawiatura.PNG" class="tia-icon">
-                <img src="img/vs.png" class="vs-icon">
-                <img src="img/x.png" class="x-icon">
-                <div class="panel">
-                    <img src="img/menu.png">
-                    <button>Zaloguj się</button>
-                </div>
-                <div class="pasek">
-                    <div class="a1">
-                        <img src="img/s1.PNG" class="i">
-                        <a class="link1" href="#">Wszystko</a>
+        
+            <div class="sekcja1">
+                <img src="img/logo.png" class="logo">
+                <div class="wpisywanie">
+                   <input type="text" class="s-input">
+                   <span class="linia"></span>
+                   <img src="img/search.PNG" class="search-icon2">
+                   <img src="img/klawiatura.PNG" class="tia-icon">
+                   <img src="img/vs.png" class="vs-icon">
+                   <img src="img/x.png" class="x-icon">
+                   <div class="panel">
+                      <img src="img/menu.png">
+                      <button>Zaloguj się</button>
                     </div>
-                    <div class="a1">
-                        <img src="img/grafika.PNG" class="w">
-                        <a href="#">Grafika</a>
+                    <div class="pasek">
+                        <div class="a1">
+                          <img src="img/s1.PNG" class="i">
+                          <a class="link1" href="#">Wszystko</a>
+                        </div>
+                        <div class="a1">
+                          <img src="img/grafika.PNG" class="w">
+                          <a href="#">Grafika</a>
+                        </div>
+                        <div class="a1">
+                           <img src="img/wideo.PNG" class="w">
+                           <a href="#">Wideo</a>
+                        </div>
+                        <div class="a1">
+                          <img src="img/wiadomosci.PNG" class="w">
+                          <a href="#">Wiadomości </a>
+                        </div>
+                        <div class="a1">
+                          <img src="img/zakupy.PNG" class="w">
+                          <a href="#">Zakupy</a>
+                        </div>
+                        <div class="a1">
+                          <img src="img/wiecej.PNG" class="w">
+                          <a href="#">Więcej</a>
+                        </div>
+                        <div class="a1">
+                          <a href="#">Ustawienia</a>
+                        </div>
+                        <div class="a1">
+                          <a href="#">Narzędzia</a>
+                        </div>
+                        <span class="kreska"></span>
+                        <span class="kreska2"></span>
                     </div>
-                    <div class="a1">
-                        <img src="img/wideo.PNG" class="w">
-                        <a href="#">Wideo</a>
-                    </div>
-                    <div class="a1">
-                        <img src="img/wiadomosci.PNG" class="w">
-                        <a href="#">Wiadomości </a>
-                    </div>
-                    <div class="a1">
-                        <img src="img/zakupy.PNG" class="w">
-                        <a href="#">Zakupy</a>
-                    </div>
-                    <div class="a1">
-                        <img src="img/wiecej.PNG" class="w">
-                        <a href="#">Więcej</a>
-                    </div>
-                    <div class="a1">
-                        <a href="#">Ustawienia</a>
-                    </div>
-                    <div class="a1">
-                        <a href="#">Narzędzia</a>
-                    </div>
-                    <span class="kreska"></span>
-                    <span class="kreska2"></span>
-                </div>
-            </div>
-            <div class="wyniki">
-                <div class="liczba">
+               </div>
+               <div class="wyniki">
+                  <div class="liczba">
                     Około 20 000 000 wyników (0,50s)
-                </div>
-                <div class="wynik">
+                  </div>
+                  <div class="wynik">
                     <a href="#" class="link2">support.google.com > websearch > answer
                         <img src="img/tr.png" class="tr"></a>
                     <div class="n1">Sprawdzanie wyników wyszukiwania podróży przez Gmail...</div>
@@ -113,16 +115,16 @@
                         zalogować <br>
                         się na konto Google. Na telefonie lub tablecie z Androidem otwórz...</div>
                     <div class="n3">Brakujące: <s>jakiś</s> | Musi zawierać słowo: jakiś</div>
-                </div>
-                <div class="wynik">
+                  </div>
+                  <div class="wynik">
                     <a href="#" class="link2">support.google.com > websearch > answer <img src="img/tr.png"
                             class="tr"></a>
                     <div class="n1">Zawężanie wyników wyszukiwania - Wyszukiwarka Google...</div>
                     <div class="n2">Możesz zwiększyć precyzję wyników wyszukiwania, używająć w zapytaniu słów i symboli.
                         <br> Wyszukiwarka Google zwykle ignoruje znaki interpunkcyjne,które nie...
                     </div>
-                </div>
-                <div class="wynik">
+                  </div>
+                  <div class="wynik">
                     <a href="#" class="link2">www.pozycjonusz.pl>rodzaje-wynikow-wyszukiwania... <img src="img/tr.png"
                             class="tr"></a>
                     <div class="n1">Rodzaje wyników wyszukiwania Google - ponad 20 ...</div>
@@ -130,8 +132,8 @@
                         czas<br>
                         temu o funkcję wewnętrznej wyszukiwarki. To rozwiązanie, bez...
                     </div>
-                </div>
-                <div class="wynik">
+                  </div>
+                  <div class="wynik">
                     <a href="#" class="link2">widoczni.com>blog>jak-wyszukiwac-w-google <img src="img/tr.png"
                             class="tr"></a>
                     <div class="n1">14 sposobów wyszukiwania w Google, których 95% z Was nie...</div>
@@ -146,18 +148,18 @@
                     <div class="n4">Gdzie znaleźć informacje na temat zawężania wyników wyszukiwania? <img
                             src="img/tr2.PNG" class="tr2"></div>
                     <div class="n4"><img src="img/tr2.PNG" class="tr2"> Pokaż więcej</div>
-                </div>
+                  </div>
                 
-                <div class="n5">
+                  <div class="n5">
                     <b>Wyszukiwania podobne:</b>
-                </div>
-                <div class="n6">
+                  </div>
+                  <div class="n6">
                     Google Trends
                     <br>Zasady wyszukiwania w Google
+                  </div>
                 </div>
-            </div>
-            <footer class="stop2">
-                <div class="links">
+                <footer class="stop2">
+                  <div class="links">
                     <div class="link-1">
                         <a href="#">O nas</a>
                         <a href="#">Reklamuj się</a>
@@ -169,12 +171,11 @@
                         <a href="#">Warunki</a>
                         <a href="#">Ustawienia</a>
                     </div>
-                </div>
-            </footer>  
-            
-
-
-        </div>
+                  </div>
+               </footer>  
+           </div>
+       
+    </div>
 </body>
 
 </html>

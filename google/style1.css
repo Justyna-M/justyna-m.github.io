@@ -1,27 +1,25 @@
-*{
+.results *{
   padding: 0;
   margin:0;
   box-sizing: border-box;
   text-decoration: none;
   font-family: arial, sans-serif;
 }
-body {
+body .results{
   display: block;
   min-height: 100vh;
-}
-body .results{
   margin: 0;
   padding: 0;
   font-size: 13px;
   max-height: none;
 }
- .nawi{
+.results .nawi{
   display: none;
 }
-.section-1{
+.results .section-1{
   display: none;
 }
-.stop{
+.results .stop{
   display: none;
 }
 .results .sekcja1 .logo{  

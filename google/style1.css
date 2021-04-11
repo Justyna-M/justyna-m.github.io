@@ -78,9 +78,9 @@ body .results{
   left: 555px;
   top: -35px;
 }
-.results .sekcja1 .wpisywanie .search-icon{
-  width: 25px;
-  top: -38px;
+.results .sekcja1 .wpisywanie .search-icon2{
+  width: 28px;
+  top: -36px;
   left: 650px;
   cursor: pointer; 
   position: relative;
@@ -216,6 +216,10 @@ body .results{
 .results .wyniki .wynik .tr{
   width: 10px;
   opacity: 0.6;
+}
+.results .wyniki .wynik .tr2{
+  width: 20px;
+  opacity: 0.9;
 }
 .results .wyniki .wynik .tr2{
   cursor:pointer;

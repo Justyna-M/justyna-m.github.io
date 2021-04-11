@@ -8,12 +8,11 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="style1.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="main.js"></script>
     <title>Szukaj w Google</title>
 </head>
-<!--Nie działa, nie mogę znaleźć błędu.-->
+
 <body>
-    <div id="app" :class="{results : googleSearch.length > 0}">
+    <div id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']"> 
         <nav class="nawi">
             <a href="#">Gmail</a>
             <a href="#">Grafika</a>
@@ -177,5 +176,12 @@
        
     </div>
 </body>
-
+<script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        googleSearch: '',
+      }
+    });
+  </script>
 </html>

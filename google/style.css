@@ -5,19 +5,19 @@
   text-decoration: none;
   font-family: arial, sans-serif;
 }
-body {
+body .home{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-nav {
+.home nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-right: 30px;
   margin-top: 14px;
 }
-nav a {
+.home nav a {
   font-size: 13px;
   display: inline-block;
   line-height: 24px;
@@ -26,21 +26,21 @@ nav a {
   cursor: pointer;
   padding: 5px 6.7px;
 }
-nav a:hover{
+.home nav a:hover{
   text-decoration: underline;
   opacity: .85;
 }
-nav img{
+.home nav img{
   width: 40px;
   padding: 12px;
   margin: auto 7px;
   cursor: pointer;
   opacity: .6;
 }
-nav img:hover{
+.home nav img:hover{
   opacity: .8;
 }
-nav button{
+.home nav button{
   border: 1px solid #357df1;
   outline: none;
   background: #357df1;
@@ -50,26 +50,26 @@ nav button{
   cursor: pointer;
   color: white;
 }
-nav button:hover{
+.home nav button:hover{
   opacity:0.90;
 }
-.section-1{
+.home .section-1{
   flex: 1;
 }
-.section-1 .logo{
+.home .section-1 .logo{
   display: block;
   margin: 0px auto;
   margin-top: 210px;
   width: 270px;
 }
-.s-box{
+.home .s-box{
   width: 580px;
   margin: 0px auto;
   position: relative;
   margin-top: -8px;
   text-align: center;
 }
-.s-box .s-input{
+.home .s-box .s-input{
   display: block;
   border: 1px solid #ddd;
   color: rgba(0, 0, 0, 0.87);
@@ -81,7 +81,7 @@ nav button:hover{
   transition: box-shadow 100ms;
   outline: none;
 }
-.s-box .s-input:hover{
+.home .s-box .s-input:hover{
   border: 1px solid #fff;
   box-shadow: 0 0 2px rgba(0,0,0, 0.05),
               0 0 2px rgba(0,0,0, 0.05),
@@ -91,21 +91,21 @@ nav button:hover{
               0 0 4px rgba(0,0,0, 0.05), 
               0 0 5px rgba(0,0,0, 0.05)    
 }
-.s-box .search-icon{
+.home .s-box .search-icon{
   width: 20px;
   opacity: .6;
   position: absolute;
   top: 13px;
   left: 14px;
 }
-.s-box .tia-icon{
+.home .s-box .tia-icon{
   width: 28px;
   position: absolute;
   top: 3px;
   right: 20px;
   cursor: pointer;  
 }
-.s-btn{
+.home .s-btn{
   border: 1px solid transparent;
   padding: 9px 15px;
   background-color: rgb(241, 241, 241);
@@ -118,13 +118,13 @@ nav button:hover{
   cursor: pointer;
   transition: border-color 100ms;
 }
-.s-btn:hover{
+.home .s-btn:hover{
   border: 1px solid #aaa;
 }
-.stop {
+.home .stop {
   background: #f2f2f2;
 }
-.stop h4{
+.home .stop h4{
   color: rgba(0,0,0, 0.54);
   font-size: 15px;
   line-height: 39.5px;
@@ -132,33 +132,33 @@ nav button:hover{
   padding-left: 29px;
   border: 1px solid #eee;
 }
-.stop a{
+.home .stop a{
   color: #5f6358;
   display: inline-block;
   padding: 15px 12px;
   font-size: 14px;
 }
-.stop a:hover{
+.home .stop a:hover{
   text-decoration: underline;
 }
-.links{
+.home .links{
   border-top: 1px solid #ddd;
   display: flex;
 }
-.link-1{
+.home .link-1{
   padding-left:18.7px;
   flex: 1;
 }
-.link-2{
+.home .link-2{
   margin-left: 15%;
   padding-left: 18.7px;
   flex:2;  
 }
-.link-3{
+.home .link-3{
   padding-left: 18.7px;
   margin-right: 10px;
 }
-.sekcja1{
+.home .sekcja1{
   display: none;
 }
 

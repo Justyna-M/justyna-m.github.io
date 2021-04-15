@@ -51,6 +51,7 @@ body .results{
   outline: none;
   margin-left: 40px;
   align-self: start; 
+ 
 }
 .results .sekcja1 .wpisywanie  .s-input:hover{
   border: 1px solid #fff;
@@ -271,6 +272,26 @@ body .results{
 .results .stop2.link-3{
   padding-left: 18.7px;
   margin-right: 10px;
+}
+.results .miasta .n2{
+  color: rgb(231, 4, 4);
+  font-size:130%;
+  padding-bottom: 7px;
+  padding-top: 3px;
+  line-height: 25px;
+}
+.results .miasta{
+  padding-left: 200px ;
+  padding-bottom: 80px;
+}
+.results .miasta .numeracja1{
+  line-height: 20px;
+  font-size: 15px;
+  list-style: none;
+}
+ul li::before {
+  content: "\2022";
+  color: red;
 }
 
 

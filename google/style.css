@@ -80,6 +80,7 @@ body .home{
   width: 100%;
   transition: box-shadow 100ms;
   outline: none;
+  
 }
 .home .s-box .s-input:hover{
   border: 1px solid #fff;

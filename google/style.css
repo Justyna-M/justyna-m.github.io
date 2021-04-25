@@ -162,5 +162,26 @@ body .home{
 .home .sekcja1{
   display: none;
 }
+.home .miasta{
+  
+  width: 90%;
+  font-size: 16px;
+  list-style: none;
+  margin-left: 5%;
+  line-height: 35px;
+  font-size: 15px;
+  list-style: none;
+  
+}
+.home .miasta .numeracja1{
+  list-style: none;
+  text-align: left;
+  
+}
+
+.home .highlight {
+  font-weight: bold;
+  background-color: yellow;
+}
 
 

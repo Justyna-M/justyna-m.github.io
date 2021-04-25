@@ -162,8 +162,7 @@ body .home{
 .home .sekcja1{
   display: none;
 }
-.home .miasta{
-  
+.home .s-box .miasta{
   width: 90%;
   font-size: 16px;
   list-style: none;
@@ -171,15 +170,12 @@ body .home{
   line-height: 35px;
   font-size: 15px;
   list-style: none;
-  
 }
-.home .miasta .numeracja1{
+.home .s-box .miasta .numeracja1{
   list-style: none;
   text-align: left;
-  
 }
-
-.home .highlight {
+.home .s-box .highlight {
   font-weight: bold;
   background-color: yellow;
 }

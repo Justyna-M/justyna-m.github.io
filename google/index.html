@@ -29,10 +29,9 @@
           <input v-model="googleSearch" type="text" list="listaMiast" class="s-input" ref="first">
           <img src="img/tia.jpg" class="tia-icon">
           <div class="miasta">
-
             <ul class="numeracja1">
-              <li v-for="city in filteredCities" :key="city" @click="handleClick(city.name)">
-                <div v-html="city.name"></div>
+              <li v-for="city in filteredCities" @click="handleClick(city.name)">
+                {{city.name}}
               </li>
             </ul>
           </div>

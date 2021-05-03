@@ -182,5 +182,8 @@ body .home{
   font-weight: bold;
   cursor: pointer;
 }
+.home .section-1 .s-box .miasta .podpowiedzi:hover{
+  background-color:rgb(236, 238, 238);
+}
 
 

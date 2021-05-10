@@ -27,7 +27,8 @@
       <form>
         <br><br>
         <div class="s-box">
-          <v-autocompleter :options="cities" @click="handleClick(city.name)" @wybierz="eventHandler($googleSearch)"></v-autocompleter>  
+          <v-autocompleter :options="cities" @click="handleClick(city.name)" @enter="eventHandler($googleSearch)">
+          </v-autocompleter>
           <input type="submit" class="s-btn" value="Szukaj w Google">
           <input type="submit" class="s-btn" value="Szczęśliwy traf">
         </div>
@@ -186,13 +187,13 @@
       googleSearch: '',
     },
     methods: {
-      eventHandler: function (id) {
-          this.isActive=1 
-          console.log(id)
-          console.log("Jestem tutaj")
-        },
+      eventHandler: function (wartosc) {
+        this.isActive = 1
+        console.log(wartosc)
+        console.log("Jestem tutaj")
+      },
     },
-            
+
   });
 </script>
 

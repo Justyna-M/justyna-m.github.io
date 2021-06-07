@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl-PL">
 
 <head>
@@ -8,9 +8,12 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="style1.css" rel="stylesheet" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <script src="cities.js"></script>
+  
   <link href="autocompleter.css" rel="stylesheet" type="text/css">
   <script src="autocompleter.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
   <title>Szukaj w Google</title>
 </head>
 
@@ -27,8 +30,18 @@
       <form>
         <br><br>
         <div class="s-box">
-          <v-autocompleter :options="cities" @click="handleClick(city.name)" @enter="eventHandler($googleSearch)">
-          </v-autocompleter>
+        <div>
+        <img src="img/search.svg" class="search-icon">
+        <input :value="value" @keydown.enter="zmienStrone" v-model="googleSearch" type="text" class="s-input" @keyup.down="goTo(activeResult + 1)" @keyup.up="goTo(activeResult - 1)" @input="findResultsDebounced">
+        <img src="img/tia.jpg" class="tia-icon"><div class="miasta">
+        <ul class="numeracja1">
+        <li v-for="(city, index) in results" :key="city.name" :class="{active : autocompleterIsActive && activeResult === index}" @click="handleClick(city.name)">
+        <div class="podpowiedzi" v-html="highlight(city.name)">
+        </div>
+        </li>
+        </ul>
+        </div>
+        </div>
           <input type="submit" class="s-btn" value="Szukaj w Google">
           <input type="submit" class="s-btn" value="Szczęśliwy traf">
         </div>
@@ -185,14 +198,58 @@
     data: {
       isActive: 0,
       googleSearch: '',
+      results: [],
+      isOnResults: false,
+      activeResult: 0,
+      autocompleterIsActive: false,
     },
     methods: {
-      eventHandler: function (wartosc) {
+      zmienStrone: function () {
         event.preventDefault()
         this.isActive = 1
-
-      },
+      },  
+      findResultsDebounced : Cowboy.debounce(100, function findResultsDebounced() {
+                console.log('Fetch: ', this.googleSearch)
+                fetch('http://localhost/search?name=' + this.googleSearch)
+                    .then(response => {
+                      return response.json()
+                    }) 
+                    .then(data => {
+                        console.log('Data: ', data);
+                        this.results = data;
+                        if (this.results.length > 10) {
+                          this.results = this.results.slice(0, 10)
+                        }
+                        console.log('results: ', this.results);
+                    })
+                    }),
+      highlight: function (wyraz) {
+      return wyraz.replaceAll(this.googleSearch, '<span class="highlight">' + this.googleSearch + '</span>')
     },
+    goTo(index) {
+      if (!this.autocompleterIsActive) {
+        index = 0;
+      }
+
+      if (index > this.results.length - 1) {
+        index = 0;
+      } else if (index < 0) {
+        index = this.results.length - 1;
+      }
+
+      this.autocompleterIsActive = true;
+      this.activeResult = index;
+      this.googleSearch = this.results[index].name;
+    },
+    handleClick: function (name) {
+      this.googleSearch = name;
+      this.isActive = 1;
+      
+    },
+
+     }
+            
+      
 
   });
 </script>
